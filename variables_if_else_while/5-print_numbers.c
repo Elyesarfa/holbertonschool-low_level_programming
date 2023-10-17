@@ -7,14 +7,15 @@
 */
 int main(void)
 {
-char alphabet = 'a';
-while (alphabet <= 'z')
+int x;
+for (x = 48; x < 58; x++)
 {
-if (alphabet != 'q' && alphabet != 'e')
+putchar(x);
+if (x < 57)
 {
-putchar(alphabet);
+putchar(44);
+putchar(32);
 }
-alphabet++;
 }
 putchar('\n');
 return (0);
