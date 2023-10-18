@@ -1,18 +1,15 @@
-#include <stdio.h>
 #include "main.h"
 /**
-* main - Entry point of the program
-*
-* Return: Always 0 (success)
+*print_alphabet - function that print alphabet
+*it prints in lowercase
+*Return: no return
 */
 void print_alphabet(void)
 {
-char alphabet = 'a';
-while (alphabet <= 'z')
+int letter;
+for (letter = 'a'; letter <= 'z'; letter++)
 {
-putchar(alphabet);
-alphabet++;
+_putchar (letter);
 }
-putchar('\n');
-return (0);
+_putchar (10);
 }
