@@ -1,17 +1,18 @@
+#include <stdio.h>
 #include "main.h"
 /**
-* main - check the code
+* main - Entry point of the program
 *
-* Return: Always 0.
+* Return: Always 0 (success)
 */
 int main(void)
 {
 char alphabet = 'a';
 while (alphabet <= 'z')
 {
-_putchar(alphabet);
+putchar(alphabet);
 alphabet++;
 }
-_putchar('\n');
+putchar('\n');
 return (0);
 }
