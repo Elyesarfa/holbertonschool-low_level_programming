@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* Prints a right-angled triangle of size `size` using the character '#'
+* print_triangle - Prints a right-angled triangle using the character '#'
 * @size: The size of the triangle
 */
 void print_triangle(int size)
