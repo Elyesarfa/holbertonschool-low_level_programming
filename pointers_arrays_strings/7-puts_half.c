@@ -14,7 +14,7 @@ length++;
 return (length);
 }
 /**
-* puts_half - prints half of a string, 
+* puts_half - prints half of a string, followed by a new line. 
 * @str: input string
 */
 void puts_half(char *str)
