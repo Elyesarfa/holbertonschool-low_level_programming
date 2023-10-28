@@ -1,15 +1,14 @@
 #include "main.h"
-#include <stdio.h>
 /**
-* is_separator - Checks if a character is a word separator.
-* @c: The character to check.
+* cap_string - Capitalizes all words of a string.
+* @str: The string to be capitalized.
 *
-* Return: 1 if c is a separator, 0 otherwise.
+* Return: A pointer to the changed string.
 */
 int is_separator(char c)
 {
 char separators[] = " \t\n,;.!?\"(){}";
-for (int i = 0; separators[i] != '\0'; i++)
+for (int i = 0; separators[i]; i++)
 {
 if (c == separators[i])
 {
@@ -18,28 +17,24 @@ return (1);
 }
 return (0);
 }
-/**
-* cap_string - Capitalizes all words in a string.
-* @str: The string to capitalize.
-*
-* Return: A pointer to the resulting string.
-*/
 char *cap_string(char *str)
 {
-char *ptr = str;
 int capitalize = 1;
-while (*ptr != '\0')
+for (int i = 0; str[i]; i++)
 {
-if (is_separator(*ptr))
+if (is_separator(str[i]))
 {
 capitalize = 1;
 }
-else if (capitalize && *ptr >= 'a' && *ptr <= 'z')
+else if (capitalize && str[i] >= 'a' && str[i] <= 'z')
 {
-*ptr -= 32;
+str[i] = str[i] - 'a' + 'A';
 capitalize = 0;
 }
-ptr++;
+else if (str[i] >= 'A' && str[i] <= 'Z')
+{
+str[i] = str[i] - 'A' + 'a';$
+}
 }
 return (str);
 }
