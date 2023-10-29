@@ -12,7 +12,7 @@ while (*s)
 length++;
 s++;
 }
-return length;
+return (length);
 }
 /**
 * puts_half - prints the second half of a string followed by a new line
