@@ -9,7 +9,6 @@
 unsigned int _strspn(char *s, char *accept)
 {
 unsigned int count = 0;
-int found;
 while (*s)
 {
 int found = 0;
