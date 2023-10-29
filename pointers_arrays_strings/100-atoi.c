@@ -17,7 +17,7 @@ while (s[len] != '\0')
 len++;
 while (a < len && f == 0)
 {
-if (s[i] == '-')
+if (s[a] == '-')
 ++b;
 if (s[a] >= '0' && s[a] <= '9')
 {
