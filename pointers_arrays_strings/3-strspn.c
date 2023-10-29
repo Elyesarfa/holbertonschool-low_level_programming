@@ -12,7 +12,7 @@ unsigned int count = 0;
 int a;
 while (*s)
 {
-for (a = 0; accept[n]; a++)
+for (a = 0; accept[a]; a++)
 {
 if (*s == accept[a])
 {
