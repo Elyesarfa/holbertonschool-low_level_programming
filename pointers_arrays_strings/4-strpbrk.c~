@@ -1,0 +1,24 @@
+#include "main.h"
+/**
+* _strpbrk - locates the first occurrence
+* in the string accept
+* @s: The string to search in
+* @accept: The string containing characters to search for
+* Return: A pointer to the byte
+* or NULL if no such byte is found
+*/
+char *_strpbrk(char *s, char *accept)
+{
+while (*s)
+{
+char *temp_accept = accept;
+while (*temp_accept)
+{
+if (*s == *temp_accept)
+return s;
+temp_accept++;
+}
+s++;
+}
+return (NULL);
+}
