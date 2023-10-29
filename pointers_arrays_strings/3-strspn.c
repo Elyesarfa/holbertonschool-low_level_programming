@@ -12,8 +12,10 @@ unsigned int count = 0;
 int found;
 while (*s)
 {
+int found = 0;
+char *temp_accept = accept;
 found = 0;
-while (*accept)
+while (*temp_accept)
 {
 if (*s == *accept)
 {
@@ -21,7 +23,7 @@ count++;
 found = 1;
 break;
 }
-accept++;
+temp_accept++;
 }
 if (found == 0)
 break;
