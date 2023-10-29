@@ -1,22 +1,39 @@
 #include "main.h"
-#include <stdio.h>
-
-int _atoi(char *str)
+/**
+* is_digit - checks if a character is a digit
+* @c: The character to check
+* Return: 1 if the character is a digit, 0 otherwise
+*/
+int is_digit(char c)
 {
-int result;
-int puiss;
-result = 0;
-puiss = 1;
-while (('-' == (*str)) || ((*str) == '+'))
-{
-if (*str == '-')
-puiss = puiss * -1;
-str++;
+return (c >= '0' && c <= '9');
 }
-while ((*str >= '0') && (*str <= '9'))
+/**
+* _atoi - converts a string to an integer
+* @s: The input string
+* Return: The integer converted from the string
+*/
+int _atoi(char *s)
 {
-result = (result * 10) + ((*str) - '0');
-str++;
+int result = 0;
+int sign = 1;
+int found_digit = 0;
+while (*s)
+{
+if (*s == '-')
+{
+sign *= -1;
 }
-return (result * puiss);
+else if (is_digit(*s))
+{
+result = result * 10 + (*s - '0');
+found_digit = 1;
+}
+else if (found_digit)
+{
+break;
+}
+s++;
+}
+return (result *sign);
 }
