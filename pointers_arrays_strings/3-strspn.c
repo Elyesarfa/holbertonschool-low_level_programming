@@ -19,7 +19,7 @@ if (*s == accept[a])
 count++;
 break;
 }
-else if (accept[n + 1] == '\0')
+else if (accept[a + 1] == '\0')
 return (count);
 }
 s++;
