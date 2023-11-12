@@ -30,7 +30,7 @@ a++;
 }
 while (s2[b] != '\0')
 {
-conct[i] = s2[b];
+conct[a] = s2[b];
 a++, b++;
 }
 conct[a] = '\0';
