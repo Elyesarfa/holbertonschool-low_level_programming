@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include "dog.h"
-
-void print_dog(struct dog *d)
+/**
+ * print_dog - prints a struct dog
+ * @d: struct dog to print
+ */
+yvoid print_dog(struct dog *d)
 {
 if (d == NULL)
 return;
