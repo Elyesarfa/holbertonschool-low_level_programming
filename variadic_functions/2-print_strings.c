@@ -12,7 +12,7 @@ for (i = 0; i < n; i++)
 char *x = va_arg(args, char *);
 printf("%s", x);
 if (i < n - 1 && separator != NULL)
-printf("%s", separator);
+printf("%p", separator);
 }
 va_end(args);
 printf("\n");
