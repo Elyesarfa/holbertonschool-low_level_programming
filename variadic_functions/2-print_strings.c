@@ -9,7 +9,7 @@ unsigned int i;
 va_start(args, n);
 for (i = 0; i < n; i++)
 {
-char *x = va_arg(args, char *);
+const char *x = va_arg(args, const char *);
 printf("%s", x);
 if (i < n - 1 && separator != NULL)
 printf("%s", separator);
