@@ -19,7 +19,7 @@ for (i = 0; i < n; i++)
 {
 const char *x = va_arg(args, const char *);
 if (x == NULL)
-printf ("(nil)");
+printf("(nil)");
 else
 printf("%s", x);
 if (i < n - 1 && separator != NULL)
